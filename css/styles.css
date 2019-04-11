@@ -75,7 +75,13 @@ img {
     margin-top: 3rem;
     display: inline-block;
     text-align: center;
+    border-radius: 1rem;
+    transition: all .3s ease-in-out;
+}
 
+.boton:hover {
+    cursor: pointer;
+    transform: scale(1.03);
 }
 
 .boton-amarillo {
@@ -180,7 +186,44 @@ img {
     font-weight: 700;
 }
 
+.iconos-caracteristicas {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.iconos-caracteristicas li {
+   /* flex: 1;*/
+    display: flex;
+    
+}
+
+.iconos-caracteristicas li img {
+    margin-right: 2rem;
+}
 .ver-todas {
     display: flex;
     justify-content: flex-end;
+}
+
+/*Contacto home*/
+
+.imagen-contacto {
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.contenido-contacto {
+    flex: 1; /*factor de crecicimento*/
+    color: #FFFFFF;
+}
+
+.contenido-contacto p {
+    font-size: 1.8rem;
 }
