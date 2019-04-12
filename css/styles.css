@@ -18,6 +18,7 @@ body {
 }
 
 .contenedor {
+    width: 95%;
     max-width: 120rem;
     margin: 0 auto; /*centra el contenido*/
 }
@@ -82,6 +83,15 @@ img {
     border-radius: 1rem;
     transition: all .3s ease-out;
     border: none;
+    display: block;
+    flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
 }
 
 .boton:hover {
@@ -120,6 +130,14 @@ img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenido-header {
+        text-align: left;
+    }
+    
 }
 
 .contenido-header h1 {
@@ -130,10 +148,18 @@ img {
 }
 
 .barra {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    
     padding-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       
+    }
+    
 }
 
 /*navegacion*/
@@ -141,13 +167,22 @@ img {
 .navegacion a {
     color: white;
     text-decoration: none;
-    font-size: 1.8rem;
-    margin-right: 2rem;
+    font-size: 2.2rem;
+    display: block;
 }
 
-.navegacion a:last-of-type {
-    margin: 0;
+@media (min-width: 768px) {
+    .navegacion a {
+        display: inline-block;
+        font-size: 1.8rem;
+        margin-right: 2rem;
+    }
+
+    .navegacion a:last-of-type {
+        margin: 0;
+    }
 }
+
 
 .navegacion a:hover {
     color: #e2e2e2;
@@ -155,10 +190,13 @@ img {
 
 /*Iconos nosotros*/
 
-.iconos-nosotros {
-    display: flex;
-    justify-content: space-between;
+@media (min-width: 768px) {
+    .iconos-nosotros {
+        display: flex;
+        justify-content: space-between;
+    }
 }
+
 
 .icono {
     flex-basis: calc(33.3% - 1rem);
@@ -166,28 +204,46 @@ img {
 
 }
 
+@media (min-width: 768px) {
+    .icono {
+        flex-basis: calc(33.3% - 1rem);
+        
+    }
+}
+
 .icono h3 {
     text-transform: uppercase;
 }
 
-.contenedor-anuncios {
-    
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+/*Anuncios*/
 
+@media (min-width: 768px) {
+    .contenedor-anuncios {
+    
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    
+    }
 }
+
 
 .anuncio {
     /*flex-grow : 1 permite que crezca si hay espacio, por mas que contenga un max-width*/
      /*flex-shrink: 0;permite que no se encoja el anuncio, se lo damos al hijo.*/
     /*flex-basis: calc(33.3% - 1rem);*/
     /*la versión corta de estas opciones es flex: flex-grow flex shrink flex-basis*/
-    flex: 0 0 calc(33.3% - 1rem);
+    
     border: 1px solid #b5b5b5;
     background-color: #f5f5f5;
     margin-bottom: 2rem;
     
+}
+
+@media (min-width: 768px) {
+    .anuncio {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
 }
 
 .contenido-anuncio {
@@ -239,7 +295,8 @@ img {
 }
 
 .contenido-contacto {
-    flex: 1; /*factor de crecicimento*/
+    /*flex: 1; factor de crecicimento*/
+    flex: 0 0 95%;
     color: #FFFFFF;
 }
 
@@ -248,24 +305,29 @@ img {
 }
 
 /*Seccion inferior*/
-.seccion-inferior {
-    display: flex;
-    justify-content: space-between;
-}
 
-.seccion-inferior .blog {
-    flex-basis: 60%;
+@media (min-width: 768px) {
+    .seccion-inferior {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .seccion-inferior .blog {
+        flex-basis: 60%;
+    }
+    
+    .seccion-inferior .testimoniales {
+        flex-basis: calc(40% - 2rem);
+    } 
 }
-
-.seccion-inferior .testimoniales {
-    flex-basis: calc(40% - 2rem);
-}   
+  
 
 .entrada-blog {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
 }
+
 
 .entrada-blog:last-of-type {
     margin-bottom: 0;
@@ -346,18 +408,29 @@ img {
 
 .contenedor-footer {
     padding: 3rem 0;
-    display: flex;
-    justify-content: space-between;
+   text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenedor-footer {
+        
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 /*Paginas internas*/
 
 /*Nosotros*/
-.contenido-nosotros {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 2rem;
+
+@media (min-width: 768px) {
+    .contenido-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+    }
 }
+
 
 .texto-nosotros blockquote {
     font-weight: 900;
